@@ -1,38 +1,67 @@
-.grid-container{
+/* para maqueteado
+-item img height:100% y width:100% dentro de un elemento
+-los bordes para ver los cajones border: 1px solid black
+-combinar grid con flex mediante display flex
+-utilizar justify content center para centrar las imagenes
+dentro de la caja 
+-para la deficnicion de los espacios de las columnas y el gap
+no usar px, usa porcentaje o fracciones (fr)
+ */
+ *{background-image: url(../imgs/Logo_prototipo1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin:0;
+    padding:0;
+ }
+header, aside, main, footer{
+    border: 1px solid black;
+}
+.grid_container{
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1%;
     grid-template-areas: 
     "header header header"
-    "nav main main"
-    "footer footer footer"
-    ;
+    "aside main main"
+    "footer footer footer";
     height: 100vh;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 1fr 80% 1fr;
 }
 header{
 grid-area: header;
+font-family: "Jacquard 24", system-ui;
+font-weight: 400;
+font-size: 40px;
+display: flex;
+flex-direction: column;
+align-items: center;
+font-style: italic;
 }
-nav{
-    grid-area: nav;
+header h1{
+    font-size: 80px;
+}
+aside{
+grid-area: aside;
 }
 main{
-    grid-area: main;
+grid-area: main;
 }
 footer{
-    grid-area: footer;
+grid-area: footer;
 }
-main img{
-    width: 200px;
-}
-section{
-    display: flex;
-    gap: 10px;
+.grid_galeria{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    gap: 5px;
+    height: 80vh;
     justify-content: space-around;
-    align-items: center;
+    align-items:center ;
 
 }
 .card{
-    display: flex;
-    flex-direction: column;
-    border: solid 1px;
+    height: 200px;
+    width: 180px;
+border: 3px solid crimson;
+
+
 }
