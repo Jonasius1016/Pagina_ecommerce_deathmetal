@@ -1,0 +1,38 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1%;
+    grid-template-areas: 
+    "header header header"
+    "nav main main"
+    "footer footer footer"
+    ;
+    height: 100vh;
+}
+header{
+grid-area: header;
+}
+nav{
+    grid-area: nav;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+main img{
+    width: 200px;
+}
+section{
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+}
