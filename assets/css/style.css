@@ -7,20 +7,24 @@ dentro de la caja
 -para la deficnicion de los espacios de las columnas y el gap
 no usar px, usa porcentaje o fracciones (fr)
  */
-* {
-    background-image: url(../imgs/Logo_prototipo1.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    margin: 0;
-    padding: 0;
-}
-
+/*
 header,
 aside,
 main,
 footer {
     border: 1px solid black;
+}*/
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../imgs/Logo_prototipo1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
 .grid_container {
@@ -28,80 +32,127 @@ footer {
     grid-template-areas:
         "header header header"
         "aside main main"
+        "aside main main"
         "footer footer footer";
     height: 100vh;
     grid-template-columns: 10% auto;
-    grid-template-rows: 1fr 80% 1fr;
+    grid-template-rows: 1fr 90% 1fr;
 }
 
-header {
-    grid-area: header;
-    font-family: "Jacquard 24", system-ui;
-    font-weight: 400;
-    font-size: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-style: italic;
-}
+    header {
+        grid-area: header;
+        font-family: "Jacquard 24", system-ui;
+        font-weight: 400;
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-style: italic;
+    }
 
-header h1 {
-    font-size: 60px;
-}
+    header h1 {
+        font-size: 60px;
+    }
 
-aside {
-    grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Bangers", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    padding-top: 10%;
-}
-aside p{
-    font-size: 25px;
-    padding: 10%;
-}
-ul li {
-    list-style: none;
-    line-height: 50px;
-    font-style: italic;
-}
+    aside {
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Bangers", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        padding-top: 10%;
+    }
 
-li:hover {
-    cursor: pointer;
-    color: red;
-}
+    aside p {
+        font-size: 25px;
+        padding-bottom: 10%;
+    }
+    aside img{
+        width: 80px;
+    }
+
+    ul li {
+        list-style: none;
+        line-height: 50px;
+        font-style: italic;
+    }
+
+    li:hover {
+        cursor: pointer;
+        color: red;
+    }
 
 
-main {
-    grid-area: main;
-}
+    main {
+        grid-area: main;
+    }
 
-footer {
-    grid-area: footer;
-}
+    footer {
+        grid-area: footer;
+        background-color: black;
+        color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.grid_galeria {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    gap: 5px;
-    height: 80vh;
-    justify-content: space-around;
-    align-items: center;
+    .grid_galeria {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 5px;
 
-}
+        justify-content: space-around;
+        align-items: center;
 
-.card {
-    height: 200px;
-    width: 180px;
-    border: 3px solid crimson;
-    /* inicio estilo visual fondo carta 
-    background-color: #807b5f;
-    opacity: 0.5;
-    background-image: radial-gradient(circle at center center, #6d6c09, #807b5f), repeating-radial-gradient(circle at center center, #6d6c09, #6d6c09, 6px, transparent 12px, transparent 6px);
-    background-blend-mode: multiply;
-    */
+    }
 
-}
+    .card {
+        height: 270px;
+        width: 250px;
+        border: 3px solid crimson;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #807b5f;
+        opacity: 1;
+        background-image: radial-gradient(circle at center center, #6d6c09, #807b5f), repeating-radial-gradient(circle at center center, #6d6c09, #6d6c09, 4px, transparent 8px, transparent 4px);
+        background-blend-mode: multiply;
+
+
+
+    }
+
+    .card img {
+        height: 70%;
+        width: 80%;
+    }
+
+    .card button {
+        width: 100%;
+        padding: 5px;
+        background-color: rgb(51, 39, 42);
+        color: darkgray;
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: red;
+    }
+
+    .card h6,
+    .card p {
+        padding: 5px;
+        background-color: black;
+        color: white
+    }
+    .craneos_encabezado{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .craneos_encabezado img{
+        width: 80px;
+    }
